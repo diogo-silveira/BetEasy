@@ -8,11 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="4 - Domain\Interfaces\" />
     <Folder Include="FeedData\" />
-    <Folder Include="1 - Presentation\" />
-    <Folder Include="2 - Service\" />
-    <Folder Include="3 - Infrastructure\" />
   </ItemGroup>
 
 </Project>
