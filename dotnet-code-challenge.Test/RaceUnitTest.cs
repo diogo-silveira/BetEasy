@@ -14,8 +14,8 @@ namespace dotnet_code_challenge.Test
         public RaceUnitTest()
         {
             raceController = new RaceController();
-           
-            HorseNames = new List<string> { "Fikhaar", "Toolatetodelegate" };
+
+            HorseNames = new List<string> { "Advancing", "Fikhaar", "Toolatetodelegate", "Coronel" };
         }
 
         [Fact]
@@ -30,6 +30,7 @@ namespace dotnet_code_challenge.Test
                 names.Add(name.Names);
             });
 
+            Assert.True(horses.Count > 0);
             Assert.IsType<List<HorseNames>>(horses);
             Assert.Equal(HorseNames, names);
         }

@@ -24,8 +24,13 @@ namespace dotnet_code_challenge.Service
 
             var horseListJson = _raceRepository.GetHorseNamesInPriceAscendingFromJson();
 
+            var horseListXml = _raceRepository.GetHorseNamesInPriceAscendingFromXml();
+
             if (horseListJson != null)
                 horseNames.AddRange(horseListJson);
+
+            if (horseListXml != null)
+                horseNames.AddRange(horseListXml);
 
             if (horseNames != null)
                 horseNames = horseNames.OrderBy(x => x.Price).ToList();

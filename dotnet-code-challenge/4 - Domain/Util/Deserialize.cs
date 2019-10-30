@@ -37,5 +37,27 @@ namespace dotnet_code_challenge.Json
             }
         }
 
+        public static T LoadXml<T>(string filename) where T : class, new()
+        {
+            if (!File.Exists(filename))
+                return new T();
+
+            StreamReader xmlStream = null;
+            try
+            {
+                xmlStream = new StreamReader(filename);
+
+                XmlSerializer serializer = new XmlSerializer(typeof(T));
+
+                return (T)serializer.Deserialize(xmlStream);
+
+            }
+            catch (Exception ex)
+            {
+                return new T();
+            }
+
+        }
+
     }
 }
