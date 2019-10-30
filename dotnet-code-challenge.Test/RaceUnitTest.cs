@@ -14,7 +14,8 @@ namespace dotnet_code_challenge.Test
         public RaceUnitTest()
         {
             raceController = new RaceController();
-            HorseNames = new List<string> {  };
+           
+            HorseNames = new List<string> { "Fikhaar", "Toolatetodelegate" };
         }
 
         [Fact]
@@ -24,7 +25,13 @@ namespace dotnet_code_challenge.Test
            
             var horses = raceController.GetHorseNamesInPriceAscending();
 
+            horses.ForEach(name =>
+            {
+                names.Add(name.Names);
+            });
+
             Assert.IsType<List<HorseNames>>(horses);
+            Assert.Equal(HorseNames, names);
         }
     }
 }
