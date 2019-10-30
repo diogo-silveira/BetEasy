@@ -3,7 +3,9 @@ using dotnet_code_challenge.Domain.Model;
 using dotnet_code_challenge.Json;
 using dotnet_code_challenge.Model.Json;
 using dotnet_code_challenge.Model.Soap;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace dotnet_code_challenge.Infrastructure
@@ -11,7 +13,11 @@ namespace dotnet_code_challenge.Infrastructure
     public class RaceRepository : IRaceRepository
     {
         private static Race races;
-        internal static readonly string jsonSource = @"C:\Users\diogo\Downloads\code-challenge\dotnet-code-challenge\FeedData\Wolferhampton_Race1.json";
+        internal static readonly string jsonSource = @"C:\Git\BetEasy\dotnet-code-challenge\FeedData\Wolferhampton_Race1.json";
+        
+        //TODO: Find out why the path does not work properly
+        //internal static string jsonSource = Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory())).Replace("bin", "") + ("FeedData\\Wolferhampton_Race1.json");
+
         private Race Races
         {
             get
@@ -28,8 +34,8 @@ namespace dotnet_code_challenge.Infrastructure
         }
 
         private static meeting meeting;
-        internal static readonly string xmlSource = @"C:\Users\diogo\Downloads\code-challenge\dotnet-code-challenge\FeedData\Caulfield_Race1.xml";
-
+        internal static readonly string xmlSource = @"C:\Git\BetEasy\dotnet-code-challenge\FeedData\Caulfield_Race1.xml";
+        //internal static readonly string xmlSource = Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory())).Replace("bin", "") + ("FeedData\\Caulfield_Race1.json");
         private meeting Meeting
         {
             get
