@@ -1,7 +1,6 @@
 using dotnet_code_challenge.Domain.Interfaces.Controller;
 using dotnet_code_challenge.Domain.Model;
 using dotnet_code_challenge.Presentation;
-using System;
 using System.Collections.Generic;
 using Xunit;
 

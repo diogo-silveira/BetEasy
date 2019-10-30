@@ -1,12 +1,10 @@
-﻿using dotnet_code_challenge.Model.Json;
+﻿using dotnet_code_challenge.Domain.Interfaces.Infrastructure;
+using dotnet_code_challenge.Domain.Model;
 using dotnet_code_challenge.Json;
-using System;
+using dotnet_code_challenge.Model.Json;
+using dotnet_code_challenge.Model.Soap;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using dotnet_code_challenge.Domain.Interfaces.Infrastructure;
-using dotnet_code_challenge.Model.Soap;
-using dotnet_code_challenge.Domain.Model;
 
 namespace dotnet_code_challenge.Infrastructure
 {
